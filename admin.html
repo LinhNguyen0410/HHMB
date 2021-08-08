@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/admin.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <title>Trang quản lý</title>
+</head>
+
+<body onload="renderTableProduct()">
+  <header>
+    <div class="navbar-admin">
+      <div class="logo ">
+        <h2>ADMIN</h2>
+      </div>
+      <div class="nav-links">
+        <button class="close-nav " onclick="closemenu() "><i class="fas fa-times-circle "></i></button>
+        <ul class="links ">
+          <li><a href="index.html ">Trang chủ</a></li>
+        </ul>
+      </div>
+      <div class="menu-trigger "><button onclick="openmenu() "><i class="fas fa-bars"></i></button></div>
+    </div>
+  </header>
+  <!-- content -->
+  <div id="content">
+    <div class="admin-title">
+      <h5>Trang quản lý sản phẩm</h5>
+    </div>
+    <div id="form">
+      <form action="" id="form-product">
+        <!-- <div class="form_id-product">
+          <label class="label" for="">Mã sản phẩm</label>
+          <input type="text" id="input_id-product">
+        </div> -->
+        <div class="form_name-product">
+          <label class="label" for="">Tên sản phẩm <span class="icon-required">*</span></label>
+          <input type="text" id="input_name-product">
+          <p id="errorName" class="error"></p>
+        </div>
+        <div class="form_price-product">
+          <label class="label" for="">Giá <span class="icon-required">*</span></label>
+          <input type="text" id="input_price-product">
+        </div>
+        <p id="errorPrice" class="error"> </p>
+        <div class="form_parameter-product">
+          <label class="label" for="">Thông số kĩ thuật<span class="icon-required">*</span></label>
+          <input type="text" id="input_parameter-product">
+        </div>
+        <p id="errorParameter" class="error"> </p>
+        <div class="form_color-product">
+          <label class="label" for="">Màu sắc<span class="icon-required">*</span></label>
+          <select name="input_color-product" id="input_color-product">
+            <option value="Trắng">Trắng</option>
+            <option value="Đen">Đen</option>
+            <option value="Vàng">Vàng</option>
+            <option value="Cam">Cam</option>
+            <option value="Xanh">Xanh</option>
+            <option value="Bạch kim">Bạch kim</option>
+            <option value="Nâu">Nâu</option>
+            <option value="Đồng">Đồng</option>
+            <option value="Tím">Tím</option>
+            <option value="Đỏ">Đỏ</option>
+            <option value="Hồng">Hồng</option>
+            <option value="Xanh min">Xanh min</option>
+          </select>
+        </div>
+        <div class="form_category-product">
+          <label class="label" for="">Danh mục<span class="icon-required">*</span></label>
+          <select name="input_category-product" id="input_category-product">
+            <option value="Máy tính">Máy tính</option>
+            <option value="Macbook">Macbook</option>
+            <option value="Điện thoại">Điện thoại</option>
+            <option value="Tablet">Tablet</option>
+            <option value="Phụ kiện">Phụ kiện</option>
+          </select>
+        </div>
+        <div class="form_status-product">
+          <label class="label" for="">Tình trạng sản phẩm<span class="icon-required">*</span></label>
+          <select name="input_status-product" id="input_status-product">
+            <option value="Hàng mới - Chính hãng">Hàng mới - Chính hãng</option>
+            <option value="Hàng xách tay">Hàng xách tay</option>
+            <option value="Hàng Like New 99%">Hàng Like New 99%</option>
+          </select>
+        </div>
+        <div class="form_url-product">
+          <label class="label" for="">URL hình ảnh chính (600 x 600)<span class="icon-required">*</span></label>
+          <input type="text" id="input_url-product">
+        </div>
+        <p id="errorUrl" class="error"> </p>
+        <div class="form_url-product">
+          <label class="label" for="">Hình ảnh Thumbnail 1(URL)</label>
+          <input type="text" id="input_url-thumb1-product">
+        </div>
+        <div class="form_url-product">
+          <label class="label" for="">Hình ảnh Thumbnail 2 (URL)</label>
+          <input type="text" id="input_url-thumb2-product">
+        </div>
+        <div class="form_url-product">
+          <label class="label" for="">Hình ảnh Thumbnail 3 (URL)</label>
+          <input type="text" id="input_url-thumb3-product">
+        </div>
+        <div class="form_url-product">
+          <label class="label" for="">Hình ảnh Thumbnail 4 (URL)</label>
+          <input type="text" id="input_url-thumb4-product">
+        </div>
+        <div class="form_url-product">
+          <label class="label" for="">Hình ảnh Thumbnail 5 (URL)</label>
+          <input type="text" id="input_url-thumb5-product">
+        </div>
+        <div class="form_url-video-product">
+          <label class="label" for="">URL Video<span class="icon-required">*</span></label>
+          <input type="text" id="input_url-video-product">
+        </div>
+        <div class="form_desc-product">
+          <label class="label" for="">Mô tả sản phẩm<span class="icon-required">*</span></label>
+          <textarea name="" id="input_desc-product" cols="67" rows="10"></textarea>
+        </div>
+        <p id="errorDesc" class="error"> </p>
+        <div class="btn_create-new-product">
+          <button id="btn_create-product" type="button" onclick="save()">
+            Tạo sản phẩm
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- show danh sách sản phẩm -->
+
+  <div class="table-wrap">
+    <table id="table_products">
+
+
+    </table>
+  </div>
+
+  <script src="./assets/js/admin.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</body>
+
+</html>

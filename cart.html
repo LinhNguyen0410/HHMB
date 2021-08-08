@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <title>Giỏ hàng</title>
+  </head>
+
+  <body onload="renderListCarts()">
+    <!-- header -->
+    <div id="header"></div>
+    <!-- header -->
+    <!-- content -->
+    <div id="bg-main">
+      <div id="container">
+        <div id="list_card-menu">
+          <a href="index.html" class="list_cart--backhome">Trang Chủ</a>
+          <i class='bx bx-tag-alt'></i>
+          <a href="" class="list_cart--title">Giỏ hàng của bạn</a>
+        </div>
+        <!-- danh sách sản phẩm dc thêm vào giỏ -->
+        <div id="list_cart">
+          <!-- nếu cart có chứa spham  -->
+
+          <!-- nếu cart k chứa spham -->
+
+        </div>
+        <div id="list_cart-no-item">
+          <img src="./assets/img/empty-cart.png" alt="">
+        </div>
+        <!-- danh sách sản phẩm dc thêm vào giỏ -->
+        <!-- tổng cộng -->
+        <div id="total_all-carts">
+          <p>Tổng cộng : <span id="total_all" >  </span></p>
+        </div>
+        <!-- thông tin người mua -->
+        <h5 class="info_customer-title">THÔNG TIN KHÁCH HÀNG</h5>
+        <div id="list_info-customer">
+          <div class="input_info-name-phone--wrap">
+            <div id="input_customer-name">
+              <input type="text" placeholder="Nhập họ và tên người nhận...">
+            </div>
+            <div id="input_customer-phoneNum">
+              <input type="number" placeholder="Số điện thoại...">
+            </div>
+          </div>
+        </div>
+        <div id="input_customer-address">
+          <!-- <input type="text" placeholder="Nhập địa chỉ nhận hàng..."> -->
+          <textarea name="" id="" cols="30" rows="10" placeholder="Nhập địa chỉ nhận hàng.........."></textarea>
+        </div>
+        <div id="btn-payment">
+          <button id="btn-pay" type="button">
+            <a href="">Tiến hành Mua hàng</a>
+          </button>
+        </div>
+        <!-- thông tin người mua -->
+      </div>
+    </div>
+
+
+    <!-- content -->
+    <!-- footer -->
+    <div id="full-width"></div>
+    <!-- footer -->
+    <!-- script -->
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/carts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous">
+    </script>
+    <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#full-width").load("footer.html");
+    });
+  </script>
+  </body>
+
+</html>

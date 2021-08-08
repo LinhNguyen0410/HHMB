@@ -1,0 +1,251 @@
+#bg-main {
+  background-color: #fff !important;
+}
+
+#list_cart {
+  box-shadow: 0 0 5px var(--main-color);
+  border-radius: 5px;
+  margin: 20px auto ;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: rgba(185, 230, 209, 0.301);
+}
+
+#list_card-menu {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+#list_card-menu i {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.list_cart--backhome, .list_cart--title {
+  font-size: 1.5rem;
+  color: #000;
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+
+.list_cart--backhome:hover, .list_cart--title:hover {
+  color: var(--main-color);
+  transition: .3s;
+  font-size: 1.6rem;
+}
+
+/* trường hợp k có spham */
+
+#list_cart-no-item {
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 5px var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* khi k có sản phầm thì list-cart display = none và list-cart-no-item
+display flex lên và ngược lại */
+
+/* trường hợp  có spham */
+
+#list_cart-info--wrap {
+  align-items: center;
+  margin-top: 2px;
+  padding: 0 5px 0 10px;
+  border-bottom: 1px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
+  background-color: #ffff;
+  height: 130px;
+  display: flex;
+}
+
+#info-product {
+  display: flex;
+  align-items: stretch;
+}
+
+#list_cart-item--img {
+  width: 10%;
+}
+
+#list_cart-item--img img {
+  width: 100px;
+}
+
+#list_cart-item--info {
+  width: 75%;
+  margin-left: 60px;
+}
+
+#list_cart-item--info-name {
+  font-size: 2rem;
+  color: #000;
+  display: block;
+  line-height: 2.5rem;
+  max-height: 5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  -moz-box-orient: vertical;
+  -moz-line-clamp: 2;
+  margin-top: 5px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+#list_cart-item--info-name:hover {
+  color: var(--main-color);
+  transition: .1s;
+}
+
+#list_cart-item--info-priceAndColor {
+  border: 1px solid rgb(34, 156, 194);
+  border-radius: 6px;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: rgba(23, 175, 137, 0.349);
+  margin-top:15px;
+  padding: 10px 5px;
+}
+
+#item-price {
+  color: var(--main-color);
+}
+
+.icon-check--success {
+  color: rgb(32, 211, 32);
+  font-size: 2rem;
+}
+
+#list_cart-item--info-handle {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#total-cart, #input-amount, #remove-item {
+  margin: 5px 20px;
+}
+
+#input-amount {
+  width: 200px;
+  height: 30px;
+}
+
+#remove-item {
+  background-color: tomato;
+  padding: 7px 25px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+#show-total {
+  font-size: 1.5rem;
+  text-align: right;
+  margin: 0 10px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+#show-total label {
+  color: #000;
+}
+
+#total_all-carts{
+  text-align: right;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+#total_all-carts span{
+  color: red;
+}
+/* TT NGƯỜI MUA */
+
+.info_customer-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-top: 100px;
+}
+
+#list_info-customer {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input_info-name-phone--wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#input_customer-name, #input_customer-phoneNum {
+  width: 50%;
+  margin: 0 5px;
+}
+
+#input_customer-name input, #input_customer-phoneNum input, #input_customer-address textarea {
+  width: 500px;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
+#input_customer-address {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#input_customer-address textarea {
+  width: 1000px;
+  height: 150px;
+  padding: 5px;
+}
+
+input:focus, textarea:focus {
+  background: rgb(214, 235, 238);
+}
+
+#btn-payment {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-pay {
+  padding: 15px 80px;
+  margin-bottom: 150px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+#btn-pay a {
+  color: #fff;
+}
+
+#btn-pay:hover {
+  /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+  background: linear-gradient(to right, #669966 50%, var(--main-color) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .3s ease-out;
+}
+
+/* TT NGƯỜI MUA */
